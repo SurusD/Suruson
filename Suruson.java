@@ -293,8 +293,8 @@ public final class Suruson {
 					code = code + "\n" + String.valueOf(start) + field.getName() + String.valueOf(start_parameter)
 							+ String.valueOf(field.get(object)) + String.valueOf(end_parameter);
 				} catch (Exception e) {
-					code = code + "\nerror" + String.valueOf(start) + String.valueOf(start_parameter) + e.toString()
-							+ String.valueOf(end_parameter);
+					code = code + "\n" + String.valueOf(start) + "error" + String.valueOf(start_parameter)
+							+ e.toString() + String.valueOf(end_parameter);
 				}
 			}
 			superClass = superClass.getSuperclass();
@@ -323,8 +323,8 @@ public final class Suruson {
 			return v;
 		}
 
-		public String compileFor(Suruson suruson) {
-			return suruson.compile(this).toString();
+		public CharSequence compileFor(Suruson suruson) {
+			return suruson.compile(this);
 		}
 
 		public String valueToString() {
