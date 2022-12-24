@@ -1,5 +1,5 @@
 # Suruson
-Parsing values ​​after certain words
+Parsing values
 # Example
 ```Java
 String code = "@Open(file.java) @File(path)";
